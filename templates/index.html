@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static', filename='style.css')}}>
+    <title>Document</title>
+</head>
+<body>
+    <style> 
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: black;
+        }
+    </style>
+    <h1>
+        ***Checkerboard***
+    </h1>
+
+    <table>
+        {% for i in range(num1):  %} <!-- rows -->
+        <tr>
+            {% if i % 2 == 0 %}
+                {% for j in range(8): %} <!-- coloumns-->
+                    {% if j % 2 == 0 %}
+                        <td class="box1"> </td>
+                    {% else %}
+                        <td class="box2"></td>
+                    {% endif %}            
+                {% endfor %}
+            {% else %}
+                {% for j in range(8): %} <!-- coloumns-->
+                    {% if j % 2 == 0 %}
+                        <td class="box2"> </td>
+                    {% else %}
+                        <td class="box1"></td>
+                    {% endif %}            
+                {% endfor %}
+            {% endif %}            
+        </tr>
+        {% endfor %}   
+    </table>
+</body>
+</html>

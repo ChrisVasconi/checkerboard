@@ -1,0 +1,36 @@
+*{
+    padding: 10px;
+    align-items: center;
+    
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 60px;
+    color: red;
+    background-color: black;
+    align-items: center;
+    text-align: center;
+}
+
+tr {
+    background-color: red;
+    color: black;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+}
+
+td {
+    background-color: red;
+    color: black;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+
+}
